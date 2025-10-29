@@ -15,6 +15,9 @@ const ForgotPassword = () => {
   
   const navigate = useNavigate();
 
+  // Replace this with your actual backend URL from Render
+  const API_BASE_URL = 'https://backend1-zdhf.onrender.com'; // ← CHANGE THIS
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -28,7 +31,7 @@ const ForgotPassword = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/forgot-password', {
+      const response = await fetch(`${API_BASE_URL}/api/auth/forgot-password`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +60,7 @@ const ForgotPassword = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/verify-reset-code', {
+      const response = await fetch(`${API_BASE_URL}/api/auth/verify-reset-code`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -100,7 +103,7 @@ const ForgotPassword = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/reset-password', {
+      const response = await fetch(`${API_BASE_URL}/api/auth/reset-password`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
