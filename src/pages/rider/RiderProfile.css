@@ -1,0 +1,62 @@
+/* RiderProfile.css */
+.rider-profile-container .sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100vh;
+  z-index: 1050;
+  transition: left 0.3s ease;
+}
+
+.rider-profile-container .sidebar.open {
+  left: 0;
+}
+
+.rider-profile-container .sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1049;
+}
+
+.rider-profile-container .main-content {
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .rider-profile-container .sidebar {
+    left: 0;
+  }
+  
+  .rider-profile-container .main-content {
+    margin-left: 280px;
+  }
+  
+  .rider-profile-container .navbar-toggler {
+    display: none;
+  }
+}
+
+.rider-profile-container .nav-link {
+  border-radius: 8px;
+  margin-bottom: 5px;
+  transition: all 0.2s ease;
+}
+
+.rider-profile-container .nav-link:hover, 
+.rider-profile-container .nav-link.active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.rider-profile-container .card {
+  border-radius: 12px;
+}
+
+.rider-profile-container .btn {
+  border-radius: 8px;
+}
