@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/auth/login`, {
+      const response = await fetch(`${API_BASE_URL}/auth/login`, {  // ✅ CORRECT
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -62,7 +62,7 @@ export const AuthProvider = ({ children }) => {
 
   const verify2FA = async (code) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/auth/verify-2fa`, {
+      const response = await fetch(`${API_BASE_URL}/auth/verify-2fa`, {  // ✅ CORRECT
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -91,7 +91,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (userData) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/auth/register`, {
+      const response = await fetch(`${API_BASE_URL}/auth/register`, {  // ✅ CORRECT
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -114,7 +114,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      await fetch(`${API_BASE_URL}/auth/logout`, {
+      await fetch(`${API_BASE_URL}/auth/logout`, {  // ✅ CORRECT
         method: "POST",
         credentials: "include",
       })
@@ -130,7 +130,7 @@ export const AuthProvider = ({ children }) => {
 
   const forgotPassword = async (email) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/auth/forgot-password`, {
+      const response = await fetch(`${API_BASE_URL}/auth/forgot-password`, {  // ✅ CORRECT
         method: "POST",
         headers: {
           "Content-Type": "application/json",
